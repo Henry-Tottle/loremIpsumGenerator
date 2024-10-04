@@ -13,8 +13,12 @@ app.use(express.json())
 let quotes = JSON.parse(fs.readFileSync('public/quotes.json', 'utf-8'))
 
 app.get('/', (req,res) => {
-    res.render("index.html", {paragraph: ''})
+    res.render("index.html")
 })
+
+// app.get('/:id', (req,res) => {
+//     res.render('index.html')
+// })
 
 app.get('/quotes', (req,res) => {
 res.json(quotes)

@@ -16,18 +16,19 @@
     </div>
 </section>
 <section class="formSection">
-    <form action="/quotes">
+    <form id="myForm">
         <label for="paragraphs"><h2>How many of them ther paragraffs?</h2></label>
-        <input id="paragraphs" type="number" max="10">
-        <input type="submit" value="Yertizz">
+        <input id="paragraphs" name="paragraphs" type="number" max="10">
+        <input id="eventButton" type="submit" value="Yertizz">
     </form>
+
 </section>
 <section class="ipsumDisplay" >
     <div id="ipsumDisplay">
         <h1>'ere: </h1>
 
     </div>
-<p><%= paragraph %></p>
+
 </section>
 
 </body>
