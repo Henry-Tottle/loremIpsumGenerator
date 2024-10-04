@@ -1,0 +1,40 @@
+body {
+    background-color: #025202;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundImage {
+    height: 300px;
+    width: 90vw;
+    border-radius: 5px;
+    background-image: url("livvi-grant-63KxTxHxIC4-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.heroText {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.formSection {
+    text-align: center;
+}
+
+.ipsumDisplay {
+    display: flex;
+    justify-content: center;
+}
+
+.ipsumDisplay div {
+    margin-top:2rem;
+    padding: 1rem;
+    width:90vw;
+    background-color: rgba(0, 128, 0, 0.18);
+}
