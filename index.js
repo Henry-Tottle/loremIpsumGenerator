@@ -13,16 +13,11 @@ app.use(express.json())
 let quotes = JSON.parse(fs.readFileSync('public/quotes.json', 'utf-8'))
 
 app.get('/', (req,res) => {
-    res.render("index.html")
+    res.render("index.html", {paragraph: ''})
 })
 
 app.get('/quotes', (req,res) => {
-    let string = ''
-    quotes.quotes.forEach(function (quote) {
-        console.log(quote)
-        string = string + quote + " "
-    })
-    res.send(string)
+res.json(quotes)
 })
 
 

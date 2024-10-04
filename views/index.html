@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="quoteDisplayer.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>West Country Ipsum</title>
 </head>
@@ -15,18 +16,19 @@
     </div>
 </section>
 <section class="formSection">
-    <form>
+    <form action="/quotes">
         <label for="paragraphs"><h2>How many of them ther paragraffs?</h2></label>
         <input id="paragraphs" type="number" max="10">
         <input type="submit" value="Yertizz">
     </form>
 </section>
-<section class="ipsumDisplay">
-    <div>
+<section class="ipsumDisplay" >
+    <div id="ipsumDisplay">
         <h1>'ere: </h1>
-        <p>Where you to? Hark at ee betwaddled Dimpsey.  Gert Lush Babber Dreckly Me'ansum.
-            Backalong burlon brock a-feard grockle. Gurt noodle hoss-stinger joppety. Wasson Ramshacklum lippen</p>
+
     </div>
+<p><%= paragraph %></p>
 </section>
+
 </body>
 </html>
