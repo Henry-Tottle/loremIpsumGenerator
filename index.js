@@ -16,9 +16,6 @@ app.get('/', (req,res) => {
     res.render("index.html")
 })
 
-// app.get('/:id', (req,res) => {
-//     res.render('index.html')
-// })
 
 app.get('/quotes', (req,res) => {
 res.json(quotes)
@@ -26,4 +23,4 @@ res.json(quotes)
 
 
 
-app.listen(3023)
+app.listen(3024)

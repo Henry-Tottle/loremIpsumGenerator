@@ -1,5 +1,5 @@
 body {
-    background-color: #025202;
+    background-color: #151414;
     color: white;
 }
 
@@ -12,15 +12,21 @@ body {
     height: 300px;
     width: 90vw;
     border-radius: 5px;
-    background-image: url("livvi-grant-63KxTxHxIC4-unsplash.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .heroText {
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+img {
+    width: 550px;
+    height: 500px;
 }
 
 .formSection {
@@ -36,5 +42,9 @@ body {
     margin-top:2rem;
     padding: 1rem;
     width:90vw;
-    background-color: rgba(0, 128, 0, 0.18);
+    background-color: rgba(24, 23, 23, 0.32);
+}
+
+p {
+    text-align: center;
 }

@@ -1,13 +1,10 @@
-
-
-
 const eventButton = document.getElementById('eventButton')
 
 const x = document.querySelector('#paragraphs')
 const ipsumDiv = document.getElementById('ipsumDisplay')
 
 
-const result = fetch("http://localhost:3023/quotes").then((response) => {
+const result = fetch("http://localhost:3024/quotes").then((response) => {
     return response.json()
 }).then((data) => {
 
@@ -30,21 +27,30 @@ const result = fetch("http://localhost:3023/quotes").then((response) => {
 
     eventButton.addEventListener('click', (event) => {
         let child = ipsumDiv.lastElementChild
+
         while (child) {
             ipsumDiv.removeChild(child)
             child = ipsumDiv.lastElementChild
         }
+
         for (let count=1; count<=parseInt(x.value); count++) {
             shuffleArray(quotes)
+            let selectedQuotes = [quotes[1],
+                quotes[2],quotes[3],
+                quotes[4],quotes[5],
+                quotes[6],quotes[7],
+                quotes[8],quotes[9],
+                quotes[10]]
+
+
             let sentence = ''
-        quotes.forEach(function(quote) {
+        selectedQuotes.forEach(function(quote) {
             sentence = sentence + quote + ' '
         })
 
-        sentence = sentence.substring(0,sentence.length -1) + '.'
         const ipsumParagraph = document.createElement('p')
 
-        ipsumParagraph.innerText = sentence
+        ipsumParagraph.innerText = sentence.toUpperCase()
         ipsumDiv.appendChild(ipsumParagraph)
         console.log(parseInt(x.value))
         event.preventDefault()
